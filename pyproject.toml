@@ -1,0 +1,14 @@
+[project]
+name = "Better-Resume"
+version = "0.1.0"
+description = "LlamaIndex WOrkflow to create a better resume, customized for specific job application."
+readme = "README.md"
+requires-python = "==3.12.9"
+dependencies = [
+    "llama-index==0.12.28",
+    "llama-index-core==0.12.28",
+    "llama-index-llms-gemini==0.4.14",
+    "llama-index-multi-modal-llms-gemini==0.5.0",
+    "llama-index-utils-workflow==0.3.0",
+    "python-dotenv==1.1.0",
+]
