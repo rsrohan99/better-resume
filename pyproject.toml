@@ -9,6 +9,8 @@ dependencies = [
     "llama-index-core==0.12.28",
     "llama-index-llms-gemini==0.4.14",
     "llama-index-multi-modal-llms-gemini==0.5.0",
+    "llama-index-readers-file>=0.4.7",
+    "llama-index-readers-web>=0.3.8",
     "llama-index-utils-workflow==0.3.0",
     "python-dotenv==1.1.0",
 ]
