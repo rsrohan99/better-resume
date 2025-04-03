@@ -69,7 +69,7 @@ async def save_updated_resume_content(
         ResumeContent,
         "Updated resume specifically tailored to the given job posting so that it stands out.",
     ],
-):
+) -> str:
     """
     Useful for saving the updated resume content after thoroughly analyzing
     the job requirements and the user's previous resume. This updated resume

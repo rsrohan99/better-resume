@@ -1,4 +1,5 @@
 from llama_index.readers.web import UnstructuredURLLoader
+from llama_index.core.workflow import Context
 
 USER_AGENT = (
     "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
@@ -6,9 +7,9 @@ USER_AGENT = (
 )
 
 
-def scrape_url(url: str) -> str:
+async def scrape_url(ctx: Context, url: str) -> str:
     """
-    Useful for getting the contents of a URL.
+    Useful for getting the contents of a URL and saving them.
     """
     loader = UnstructuredURLLoader(
         urls=[url],
@@ -18,8 +19,11 @@ def scrape_url(url: str) -> str:
         },
     )
     data = loader.load_data()
+    current_state = await ctx.get("state")
+    current_state["job_posting_data"] = data
+    await ctx.set("state", current_state)
     return (
-        f'Contents from the URL "{url}": \n{data[0].text}'
+        f'Contents from the URL "{url}" saved'
         if data
         else 'Failed to get contents from the URL "{url}"'
     )
