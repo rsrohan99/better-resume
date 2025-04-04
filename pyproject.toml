@@ -13,4 +13,5 @@ dependencies = [
     "llama-index-readers-web>=0.3.8",
     "llama-index-utils-workflow==0.3.0",
     "python-dotenv==1.1.0",
+    "unstructured>=0.17.2",
 ]

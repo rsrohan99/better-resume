@@ -9,6 +9,7 @@ async def read_existing_resume(ctx: Context):
     current_state = await ctx.get("state")
     try:
         resume_file = current_state.get("resume_file")
+        print(f"\nReading resume contents from {resume_file}...\n")
         docs = SimpleDirectoryReader(
             input_files=[resume_file],
         ).load_data()

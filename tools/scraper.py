@@ -7,10 +7,13 @@ USER_AGENT = (
 )
 
 
-async def scrape_url(ctx: Context, url: str) -> str:
+async def scrape_url(ctx: Context) -> str:
     """
     Useful for getting the contents of a URL and saving them.
     """
+    current_state = await ctx.get("state")
+    url = current_state["url"]
+    print(f"\nGetting contents from url: {url}...\n")
     loader = UnstructuredURLLoader(
         urls=[url],
         continue_on_failure=False,
@@ -19,8 +22,8 @@ async def scrape_url(ctx: Context, url: str) -> str:
         },
     )
     data = loader.load_data()
-    current_state = await ctx.get("state")
-    current_state["job_posting_data"] = data
+    current_state["job_posting_data"] = data[0].text
+    # print(f"\nJob Data: {data[0].text}\n")
     await ctx.set("state", current_state)
     return (
         f'Contents from the URL "{url}" saved'
