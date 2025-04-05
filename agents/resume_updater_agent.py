@@ -1,5 +1,5 @@
 from dotenv import load_dotenv
-from llama_index.core.agent.workflow import ReActAgent
+from llama_index.core.agent.workflow import FunctionAgent
 from llama_index.llms.gemini import Gemini
 
 from tools import read_existing_resume, save_updated_resume_content
@@ -7,7 +7,7 @@ from tools import read_existing_resume, save_updated_resume_content
 load_dotenv()
 llm = Gemini(model="models/gemini-2.0-flash")
 
-resume_updater_agent = ReActAgent(
+resume_updater_agent = FunctionAgent(
     name="ResumeUpdaterAgent",
     description="Useful for finding all the best ways to make a resume stand out in the job market.",
     system_prompt=(
