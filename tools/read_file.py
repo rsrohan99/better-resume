@@ -1,4 +1,5 @@
 from typing import Annotated
+import os
 
 
 async def read_file(
@@ -9,12 +10,15 @@ async def read_file(
     """
 
     try:
+        base_dir = "html_resume"
         print(f"\nGetting contents from file: {file}...\n")
-        file_to_read = "resume.html" if file == "html" else "style.css"
+        file_to_read = os.path.join(
+            base_dir, "resume.html" if file == "html" else "style.css"
+        )
         with open(file_to_read, "r") as f:
             contents = f.readlines()
-            return "\n".join(
-                [f"{i + 1} | {line.strip()}" for i, line in enumerate(contents)]
-            )
+            return "".join([f"{i + 1} | {line}" for i, line in enumerate(contents)])
     except FileNotFoundError:
         return "File not found."
+    except Exception as e:
+        return f"An error occurred: {str(e)}. Try again..."

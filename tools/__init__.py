@@ -5,6 +5,7 @@ from .save_updated_resume import save_updated_resume_content
 from .read_file import read_file
 from .apply_diff import apply_diff
 from .read_resume_markdown import read_resume_markdown
+from .generate_resume_markdown import generate_resume_markdown
 
 
 __all__ = [
@@ -15,4 +16,5 @@ __all__ = [
     "read_file",
     "apply_diff",
     "read_resume_markdown",
+    "generate_resume_markdown",
 ]
