@@ -1,6 +1,8 @@
 #
 
-In this tutorial,
+In this tutorial, we will use AgentWorkflow, the new multi-agent framework from LlamaIndex, to build a multi-agent system that takes your existing resume and a job posting URL, and generates a tailored resume exclusively for that job posting.
+
+It also has a nice chat interface to iteratively improve the resume, including updating the resume with various styles and colorschemes.
 
 Full tutorial 👇
 
@@ -11,7 +13,7 @@ Full tutorial 👇
 - Clone the repo
 
 ```bash
-
+git clone 
 ```
 
 - Install dependencies
@@ -29,5 +31,5 @@ cp .env.example .env
 - Run the workflow with the topic to research
 
 ```bash
-uv run main.py ""
+uv run main.py
 ```
