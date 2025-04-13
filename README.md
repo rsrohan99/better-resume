@@ -1,4 +1,4 @@
-#
+# Better-Resume
 
 In this tutorial, we will use AgentWorkflow, the new multi-agent framework from LlamaIndex, to build a multi-agent system that takes your existing resume and a job posting URL, and generates a tailored resume exclusively for that job posting.
 
