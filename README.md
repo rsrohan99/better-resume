@@ -13,7 +13,7 @@ Full tutorial 👇
 - Clone the repo
 
 ```bash
-git clone 
+git clone git@github.com:rsrohan99/better-resume.git
 ```
 
 - Install dependencies
