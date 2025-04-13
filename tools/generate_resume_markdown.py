@@ -1,3 +1,5 @@
+import shutil
+import os
 from typing import Annotated
 from workflows.update_resume_workflow import get_resume_updater_workflow
 from utils.verbose import log_events
@@ -25,6 +27,11 @@ async def generate_resume_markdown(
 
         await log_events(handler)
         await handler
+
+        if os.path.exists("html_resume"):
+            shutil.rmtree("html_resume")
+        shutil.copytree("html_resume_template", "html_resume")
+        print("\nDeleting old html_resume folder and copying the new one...\n")
         return "Resume markdown file generated successfully."
 
     except FileNotFoundError:

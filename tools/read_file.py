@@ -6,7 +6,7 @@ async def read_file(
     file: Annotated[str, "The file to read, either 'html' or 'css'"],
 ) -> str:
     """
-    Useful for getting the contents of either the html or css file.
+    Useful for getting the contents of either the html or css file. shows the line numbers, which are used for applying diff.
     """
 
     try:
