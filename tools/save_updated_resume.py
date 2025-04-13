@@ -1,8 +1,7 @@
 from typing import Annotated
+import subprocess
 
 from llama_index.core.workflow import Context
-
-from pydantic import BaseModel, Field
 
 
 async def save_updated_resume_content(
@@ -25,4 +24,6 @@ async def save_updated_resume_content(
     with open(updated_resume_file_path, "w") as f:
         f.write(updated_resume_in_markdown)
     await ctx.set("state", current_state)
+    subprocess.run(["rm", "-r", "html_resume"])
+    subprocess.run(["cp", "-r", "html_resume_template", "html_resume"])
     return "Job Research result saved successfully."
