@@ -4,9 +4,11 @@ In this tutorial, we will use AgentWorkflow, the new multi-agent framework from 
 
 It also has a nice chat interface to iteratively improve the resume, including updating the resume with various styles and colorschemes.
 
-Full tutorial 👇
+Full tutorial:
+- Part 1: https://clusteredbytes.pages.dev/posts/2025/llamaindex-agentworkflow-better-resume/
 
-[![]()]()
+Demo 👇
+[![BetterResume](https://img.youtube.com/vi/WAjuJKX95tI/maxresdefault.jpg)](https://www.youtube.com/watch?v=WAjuJKX95tI)
 
 ## How to use
 
