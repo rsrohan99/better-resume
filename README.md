@@ -33,3 +33,7 @@ cp .env.example .env
 ```bash
 uv run main.py
 ```
+
+- provide the existing resume file and the job posting url in the chat interface
+- open the `resume.html` file in the browser to see the rendered resume
+- print the rendered resume using `ctrl+p'
