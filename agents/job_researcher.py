@@ -12,7 +12,7 @@ job_research_agent = FunctionAgent(
     description="Useful for doing amazing analysis on the job posting from the given URL.",
     system_prompt=(
         "As a skilled job researcher, help pinpoint the necessary "
-        "ualifications and skills sought by the employer, "
+        "qualifications and skills sought by the employer, "
         "forming the foundation for effective application tailoring."
         "Analyze the job posting URL provided "
         "to extract key skills, experiences, and qualifications "
