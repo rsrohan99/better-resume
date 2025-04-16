@@ -6,7 +6,7 @@ It also has a nice chat interface to iteratively improve the resume, including u
 
 Full tutorial:
 - Part 1: https://clusteredbytes.pages.dev/posts/2025/llamaindex-agentworkflow-better-resume/
-- Part 1: https://clusteredbytes.pages.dev/posts/2025/llamaindex-agentworkflow-better-resume2/
+- Part 2: https://clusteredbytes.pages.dev/posts/2025/llamaindex-agentworkflow-better-resume2/
 
 Demo 👇
 [![BetterResume](https://img.youtube.com/vi/WAjuJKX95tI/maxresdefault.jpg)](https://www.youtube.com/watch?v=WAjuJKX95tI)
